@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://example.com/ontologie/pannes#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testDeLaMMoireViveEtOuRemplacementDeLaMMoireVive">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Test de la mémoire vive et/ou remplacement de la mémoire vive</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcRedMarreEnBoucle">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteMRe"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLaCarteMReEtOuRemplacementDeLaCarteMRe"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeDMarrage"/>
+    <rdfs:label>Le PC redémarre en boucle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDeLaMMoireRamEtOuRemplacementDeLaCarteMRe">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Vérification de la mémoire RAM et/ou remplacement de la carte mère</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#batterieCmos">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Batterie CMOS</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcSurchauffe">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#ventilateur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#nettoyageDuVentilateurEtOuVRificationDeLaPTeThermique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeSurchauffe"/>
+    <rdfs:label>Le PC surchauffe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuPiloteDuPortUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Mise à jour du pilote du port USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lOrdinateurPlanteRGuliRement">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#mMoireRam"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLaMMoireRamEtOuRemplacementDeLaMMoireRam"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePerformances"/>
+    <rdfs:label>L'ordinateur plante régulièrement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#aPourType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <rdfs:domain rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <rdfs:range rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:range rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>a pour type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourLogicielle">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Mise à jour logicielle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#ventilateur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Ventilateur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leVentilateurEstBruyant">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#ventilateur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#nettoyageDuVentilateurEtOuRemplacementDuVentilateur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#bruitsAnormaux"/>
+    <rdfs:label>Le ventilateur est bruyant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeSeConnectePasAuWiFi">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteRSeauSansFil"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteRSeau"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesPilotesDeLaCarteRSeauSansFilEtOuRInitialisationDeLaCarteRSeau"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesPilotesDeLaCarteRSeauEtOuRemplacementDeLaCarteRSeau"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeConnexion"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeRSeau"/>
+    <rdfs:label>Le PC ne se connecte pas au Wi-Fi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeDTectePasLeMoniteur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteGraphique"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteGraphiqueEtOuRemplacementDeLaCarteGraphique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAffichage"/>
+    <rdfs:label>Le PC ne détecte pas le moniteur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDAffichage">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème d'affichage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#performancesRDuites">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Performances réduites</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#surchauffe">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Surchauffe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuPiloteDuLecteurCdDvd">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Mise à jour du pilote du lecteur CD/DVD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeSTeintPas">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#systMeDExploitation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuSystMeDExploitationEtOuNettoyageDuRegistre"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDArrT"/>
+    <rdfs:label>Le PC ne s'éteint pas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeDTectePasLeDisqueDur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#disqueDur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDuDisqueDurEtOuRemplacementDuDisqueDur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeStockage"/>
+    <rdfs:label>Le PC ne détecte pas le disque dur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#estAssocieALaMarque">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <rdfs:domain rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <rdfs:range rdf:resource="http://example.com/ontologie/pannes#MarqueDOrdinateur"/>
+    <rdfs:label>est associé à la marque</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteGraphiqueEtOuRemplacementDeLaCarteGraphique">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Mise à jour des pilotes de la carte graphique et/ou remplacement de la carte graphique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDuLecteurCdDvd">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Remplacement du lecteur CD/DVD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesTempRaturesEtOuMiseJourDuSystMeDExploitation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#entretienMiseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Vérification des températures et/ou mise à jour du système d'exploitation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testDeLaCarteGraphiqueEtOuRemplacementDeLaCarteGraphique">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Test de la carte graphique et/ou remplacement de la carte graphique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#Solution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Solution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leClavierNeFonctionnePas">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#clavier"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDuClavier"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDuClavierEtOuRemplacementDuClavier"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#panneDePRiphRique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePRiphRique"/>
+    <rdfs:label>Le clavier ne fonctionne pas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#aPourComposant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <rdfs:range rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <rdfs:label>a pour composant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeDMarrePasAprSUneMiseJour">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#systMeDExploitation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#rParationOuRInstallationDuSystMeDExploitation"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeLogiciel"/>
+    <rdfs:label>Le PC ne démarre pas après une mise à jour</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#espaceDeStockageInsuffisant">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Espace de stockage insuffisant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesPilotesDeLaCarteRSeauEtOuRInitialisationDeLaCarteRSeau">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleEntretien"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Vérification des pilotes de la carte réseau et/ou réinitialisation de la carte réseau</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#chargeur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Chargeur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#cran">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Écran</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeDTectePasLesPRiphRiquesUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteMRe"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#portUsb"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuBiosEtOuRemplacementDeLaCarteMRe"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesDuPortUsbEtOuRemplacementDuPortUsb"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePRiphRique"/>
+    <rdfs:label>Le PC ne détecte pas les périphériques USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#rParationLogicielle">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Réparation logicielle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#entretien">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Entretien</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcRedMarreToutSeul">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#systMeDExploitation"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#alimentation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesTempRaturesEtOuMiseJourDuSystMeDExploitation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLAlimentationEtOuRemplacementDeLAlimentation"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeRedMarrage"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAlimentation"/>
+    <rdfs:label>Le PC redémarre tout seul</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesCBlesDeConnexionEtOuRemplacementDeLCran">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Vérification des câbles de connexion et/ou remplacement de l'écran</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesConnexionsEtOuRemplacementDeLaSouris">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Vérification des connexions et/ou remplacement de la souris</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcAfficheDesLignesVerticalesSurLCran">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteGraphique"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteGraphiqueEtOuRemplacementDeLaCarteGraphique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAffichage"/>
+    <rdfs:label>Le PC affiche des lignes verticales sur l'écran</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#entretienRemplacementDeComposant">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Entretien/Remplacement de composant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDesPilotesDuPortUsbEtOuRemplacementDuPortUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Mise à jour des pilotes du port USB et/ou remplacement du port USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDeComposant">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Remplacement de composant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#nettoyageDuVentilateurEtOuVRificationDeLaPTeThermique">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#entretien"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Nettoyage du ventilateur et/ou vérification de la pâte thermique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#TypeDePanne">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Type de panne</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#alimentation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Alimentation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeRefroidissement">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de refroidissement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuPiloteDeLaCarteGraphique">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Mise à jour du pilote de la carte graphique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lOrdinateurNeSeConnectePasInternet">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteRSeau"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesPilotesDeLaCarteRSeauEtOuRInitialisationDeLaCarteRSeau"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeConnexion"/>
+    <rdfs:label>L'ordinateur ne se connecte pas à Internet</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuPiloteDeLaCarteSonEtOuRemplacementDeLaCarteSon">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Mise à jour du pilote de la carte son et/ou remplacement de la carte son</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lecteurDeCdDvd">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Lecteur de CD/DVD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lecteurCdDvd">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Lecteur CD/DVD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeChargePasLaBatterie">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#chargeur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDuChargeurEtOuRemplacementDuChargeur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAlimentation"/>
+    <rdfs:label>Le PC ne charge pas la batterie</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcAfficheUnCranBleuAuDMarrage">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#systMeDExploitation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#rParationOuRInstallationDuSystMeDExploitation"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeLogiciel"/>
+    <rdfs:label>Le PC affiche un écran bleu au démarrage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#MarqueDOrdinateur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Marque d'ordinateur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDePerformances">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de performances</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteRSeauEtOuRemplacementDeLaCarteRSeau">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Mise à jour des pilotes de la carte réseau et/ou remplacement de la carte réseau</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDeLaCarteMRe">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Remplacement de la carte mère</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leSonNeFonctionnePlus">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteSon"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuPiloteDeLaCarteSonEtOuRemplacementDeLaCarteSon"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeAudio"/>
+    <rdfs:label>Le son ne fonctionne plus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#portUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Port USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leLecteurDvdNeFonctionnePas">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#lecteurCdDvd"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuPiloteDuLecteurCdDvd"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#panneDePRiphRique"/>
+    <rdfs:label>Le lecteur DVD ne fonctionne pas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#laSourisNeFonctionnePlus">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#souris"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesConnexionsEtOuRemplacementDeLaSouris"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePRiphRique"/>
+    <rdfs:label>La souris ne fonctionne plus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lCranEstNoir">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteGraphique"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#cran"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDeLaCarteGraphique"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesCBlesDeConnexionEtOuRemplacementDeLCran"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAffichage"/>
+    <rdfs:label>L'écran est noir</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testEtRemplacementDesBarrettesDeMMoireViveDFectueuses">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Test et remplacement des barrettes de mémoire vive défectueuses</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testDeLaCarteMReEtOuRemplacementDeLaCarteMRe">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Test de la carte mère et/ou remplacement de la carte mère</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeSeConnectePasInternet">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteRSeau"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteRSeauEtOuRemplacementDeLaCarteRSeau"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeConnexion"/>
+    <rdfs:label>Le PC ne se connecte pas à Internet</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcMetDesBipsAuDMarrage">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteMRe"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#mMoireVive"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDeLaMMoireRamEtOuRemplacementDeLaCarteMRe"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLaMMoireViveEtOuRemplacementDeLaMMoireVive"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeDMarrage"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeMMoire"/>
+    <rdfs:label>Le PC émet des bips au démarrage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesPilotesDuPortUsbEtOuRemplacementDuPortUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Vérification des pilotes du port USB et/ou remplacement du port USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#carteSon">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Carte son</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leDisqueDurMetUnBruitTrange">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#disqueDur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDuDisqueDur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#bruitsTranges"/>
+    <rdfs:label>Le disque dur émet un bruit étrange</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#TypeDeSolution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Type de solution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leClavierNeFonctionnePlus">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#clavier"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesConnexionsEtOuRemplacementDuClavier"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePRiphRique"/>
+    <rdfs:label>Le clavier ne fonctionne plus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#rInstallationMiseJourLogicielle">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Réinstallation/Mise à jour logicielle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lOrdinateurRalentit">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#processeur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#nettoyageDuVentilateurEtOuMiseJourDuPiloteDuProcesseur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#performancesRDuites"/>
+    <rdfs:label>L'ordinateur ralentit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeSAllumePlusDuTout">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#alimentation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLAlimentationEtOuRemplacementDeLAlimentation"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAlimentation"/>
+    <rdfs:label>Le PC ne s'allume plus du tout</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDeLaCarteGraphique">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Remplacement de la carte graphique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDArrT">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème d'arrêt</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuPiloteDeLaSouris">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Mise à jour du pilote de la souris</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Mise à jour logicielle/Remplacement de composant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDesPilotesDuLecteurEtOuRemplacementDuLecteur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Mise à jour des pilotes du lecteur et/ou remplacement du lecteur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDuDisqueDurParUnDisqueSsd">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourMatRielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Remplacement du disque dur par un disque SSD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcSeBloqueAuDMarrage">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#disqueDur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDeLTatDuDisqueDurEtOuRInstallationDuSystMeDExploitation"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeDMarrage"/>
+    <rdfs:label>Le PC se bloque au démarrage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#carteMRe">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Carte mère</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeDMarrePas">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#alimentation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLAlimentationEtOuRemplacementDeLAlimentation"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAlimentation"/>
+    <rdfs:label>Le PC ne démarre pas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeConnexion">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de connexion</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuSystMeDExploitationEtOuNettoyageDuRegistre">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleEntretien"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Mise à jour du système d'exploitation et/ou nettoyage du registre</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteSonEtOuRemplacementDeLaCarteSon">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Mise à jour des pilotes de la carte son et/ou remplacement de la carte son</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lOrdinateurNeDMarrePas">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#alimentation"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#batterieCmos"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteMRe"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDeLAlimentation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDeLaBatterieCmos"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDeLaCarteMRe"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeDMarrage"/>
+    <rdfs:label>L'ordinateur ne démarre pas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#carteGraphique">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Carte graphique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourLogicielleEntretien">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Mise à jour logicielle/Entretien</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDAlimentation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème d'alimentation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesPilotesDuClavierEtOuRemplacementDuPortUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Vérification des pilotes du clavier et/ou remplacement du port USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leVentilateurFaitDuBruit">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#ventilateur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDuVentilateur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#bruitsTranges"/>
+    <rdfs:label>Le ventilateur fait du bruit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeDTectePasLImprimante">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#portUsb"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesPilotesDeLImprimanteEtOuRemplacementDuPortUsb"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePRiphRique"/>
+    <rdfs:label>Le PC ne détecte pas l'imprimante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcAfficheUnCranNoir">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteGraphique"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLaCarteGraphiqueEtOuRemplacementDeLaCarteGraphique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAffichage"/>
+    <rdfs:label>Le PC affiche un écran noir</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leLecteurCdNeFonctionnePas">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#lecteurCdDvd"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDuLecteurCdDvd"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#panneDePRiphRique"/>
+    <rdfs:label>Le lecteur CD ne fonctionne pas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeReconnaTPasLesCdDvd">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#lecteurDeCdDvd"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesDuLecteurEtOuRemplacementDuLecteur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePRiphRique"/>
+    <rdfs:label>Le PC ne reconnaît pas les CD/DVD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testDuChargeurEtOuRemplacementDuChargeur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Test du chargeur et/ou remplacement du chargeur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#carteRSeauSansFil">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Carte réseau sans fil</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeSTeintPasComplTement">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#systMeDExploitation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuSystMeDExploitationEtOuRInstallationDuSystMeDExploitation"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeLogiciel"/>
+    <rdfs:label>Le PC ne s'éteint pas complètement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#mMoireVive">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Mémoire vive</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuSystMeDExploitationEtOuRInitialisationDesParamTresDeVeille">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleEntretien"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Mise à jour du système d'exploitation et/ou réinitialisation des paramètres de veille</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#suppressionDeFichiersInutilesEtOuAjoutDUnDisqueDurExterne">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#entretien"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Suppression de fichiers inutiles et/ou ajout d'un disque dur externe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#rParationOuRInstallationDuSystMeDExploitation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#rInstallationMiseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Réparation ou réinstallation du système d'exploitation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#entretienMiseJourLogicielle">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Entretien/Mise à jour logicielle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcMetUnBipAuDMarrage">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteMRe"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDuBiosEtOuRemplacementDeLaCarteMRe"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeDMarrage"/>
+    <rdfs:label>Le PC émet un bip au démarrage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#rParationDuSecteurDeDMarrage">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#rParationLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Réparation du secteur de démarrage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#bruitsTranges">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Bruits étranges</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDesPilotesEtOuRInstallationDuSystMeDExploitation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRInstallation"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Mise à jour des pilotes et/ou réinstallation du système d'exploitation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leSystMeDExploitationNeDMarrePas">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#disqueDur"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteMRe"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#rInstallationDuSystMeDExploitation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDeLaCarteMRe"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#rParationDuSecteurDeDMarrage"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeDMarrage"/>
+    <rdfs:label>Le système d'exploitation ne démarre pas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeDTectePasLeClavier">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#portUsb"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesPilotesDuClavierEtOuRemplacementDuPortUsb"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePRiphRique"/>
+    <rdfs:label>Le PC ne détecte pas le clavier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeSurchauffe">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de surchauffe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lOrdinateurAfficheDesPixelsMorts">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#cran"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesPixelsMortsEtOuRemplacementDeLCran"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAffichage"/>
+    <rdfs:label>L'ordinateur affiche des pixels morts</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#performance">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Performance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#mMoireRam">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Mémoire RAM</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcSeFige">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#mMoireVive"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLaMMoireViveEtOuRemplacementDeLaMMoireVive"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePerformances"/>
+    <rdfs:label>Le PC se fige</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#leDisqueDurEstPlein">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#disqueDur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#suppressionDeFichiersInutilesEtOuAjoutDUnDisqueDurExterne"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#espaceDeStockageInsuffisant"/>
+    <rdfs:label>Le disque dur est plein</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesPixelsMortsEtOuRemplacementDeLCran">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Vérification des pixels morts et/ou remplacement de l'écran</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcSeFigeRGuliRement">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#mMoireVive"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteMRe"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testEtRemplacementDesBarrettesDeMMoireViveDFectueuses"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuBios"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeStabilit"/>
+    <rdfs:label>Le PC se fige régulièrement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcAfficheUneErreurDeMMoire">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#mMoireVive"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLaMMoireViveEtOuRemplacementDeLaMMoireVive"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeMMoire"/>
+    <rdfs:label>Le PC affiche une erreur de mémoire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeLogiciel">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de logiciel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lOrdinateurNeDTectePasUneClUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#portUsb"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuPiloteUsb"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#panneDePRiphRique"/>
+    <rdfs:label>L'ordinateur ne détecte pas une clé USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeBruit">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de bruit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuBios">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Mise à jour du BIOS</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuSystMeDExploitationEtOuRInstallationDuSystMeDExploitation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRInstallation"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Mise à jour du système d'exploitation et/ou réinstallation du système d'exploitation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcMetDesBruitsInhabituels">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#ventilateur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#nettoyageDuVentilateurEtOuRemplacementDuVentilateur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeBruit"/>
+    <rdfs:label>Le PC émet des bruits inhabituels</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#aPourSolution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <rdfs:range rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <rdfs:label>a pour solution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#clavier">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Clavier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testDeLaMMoireRamEtOuRemplacementDeLaMMoireRam">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Test de la mémoire RAM et/ou remplacement de la mémoire RAM</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesPilotesDeLaCarteRSeauSansFilEtOuRInitialisationDeLaCarteRSeau">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleEntretien"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Vérification des pilotes de la carte réseau sans fil et/ou réinitialisation de la carte réseau</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testDeLAlimentationEtOuRemplacementDeLAlimentation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Test de l'alimentation et/ou remplacement de l'alimentation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#systMeDExploitation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Système d'exploitation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#processeur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Processeur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#Composant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Composant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcAfficheUneImageDFormE">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteGraphique"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteGraphiqueEtOuRemplacementDeLaCarteGraphique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAffichage"/>
+    <rdfs:label>Le PC affiche une image déformée</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeDTectePasLaCarteGraphique">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteGraphique"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteGraphiqueEtOuRemplacementDeLaCarteGraphique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAffichage"/>
+    <rdfs:label>Le PC ne détecte pas la carte graphique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesPilotesDeLImprimanteEtOuRemplacementDuPortUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Vérification des pilotes de l'imprimante et/ou remplacement du port USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testDeLaSourisEtOuRemplacementDeLaSouris">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Test de la souris et/ou remplacement de la souris</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testDuClavierEtOuRemplacementDuClavier">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Test du clavier et/ou remplacement du clavier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNMetPasDeSon">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteSon"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteSonEtOuRemplacementDeLaCarteSon"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeSon"/>
+    <rdfs:label>Le PC n'émet pas de son</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#souris">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Souris</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDuVentilateur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Remplacement du ventilateur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesConnexionsEtOuRemplacementDuClavier">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Vérification des connexions et/ou remplacement du clavier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lOrdinateurNeDTectePasLePRiphRiqueUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#portUsb"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuPiloteDuPortUsb"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#panneDePRiphRique"/>
+    <rdfs:label>L'ordinateur ne détecte pas le périphérique USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeSAllumePlus">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#alimentation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLAlimentationEtOuRemplacementDeLAlimentation"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAlimentation"/>
+    <rdfs:label>Le PC ne s'allume plus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuBiosEtOuRemplacementDeLaCarteMRe">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Mise à jour du BIOS et/ou remplacement de la carte mère</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#Panne">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Panne</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourDuPiloteUsb">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Mise à jour du pilote USB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lOrdinateurChauffeAnormalement">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#ventilateur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#nettoyageDuVentilateur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#surchauffe"/>
+    <rdfs:label>L'ordinateur chauffe anormalement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcAfficheUnCranBleu">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#pilote"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteGraphique"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesEtOuRInstallationDuSystMeDExploitation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDesPilotesDeLaCarteGraphiqueEtOuRemplacementDeLaCarteGraphique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeLogiciel"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAffichage"/>
+    <rdfs:label>Le PC affiche un écran bleu</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDuDisqueDur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Remplacement du disque dur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeSon">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de son</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourMatRielle">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Mise à jour matérielle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#nettoyageDuVentilateurEtOuRemplacementDuVentilateur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#entretienRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Nettoyage du ventilateur et/ou remplacement du ventilateur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#ajoutDeMMoireVive">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourMatRielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Ajout de mémoire vive</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#panneDePRiphRique">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Panne de périphérique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDePRiphRique">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de périphérique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#dell">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#MarqueDOrdinateur"/>
+    <rdfs:label>Dell</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#rInstallationDuSystMeDExploitation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#rInstallationLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Réinstallation du système d'exploitation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#miseJourLogicielleRInstallation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Mise à jour logicielle/Réinstallation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeSeMetPasEnVeille">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#systMeDExploitation"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuSystMeDExploitationEtOuRInitialisationDesParamTresDeVeille"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeLogiciel"/>
+    <rdfs:label>Le PC ne se met pas en veille</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#bruitsAnormaux">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Bruits anormaux</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcNeDTectePasLeDisqueDurExterne">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#portUsb"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#vRificationDesPilotesDuPortUsbEtOuRemplacementDuPortUsb"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePRiphRique"/>
+    <rdfs:label>Le PC ne détecte pas le disque dur externe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDeLaBatterieCmos">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Remplacement de la batterie CMOS</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#laSourisNeFonctionnePas">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#souris"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuPiloteDeLaSouris"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#testDeLaSourisEtOuRemplacementDeLaSouris"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#panneDePRiphRique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePRiphRique"/>
+    <rdfs:label>La souris ne fonctionne pas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lePcChauffeTrop">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#ventilateur"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#nettoyageDuVentilateurEtOuRemplacementDuVentilateur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDeRefroidissement"/>
+    <rdfs:label>Le PC chauffe trop</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeDMarrage">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de démarrage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDuBiosEtOuRemplacementDeLaCarteMRe">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Vérification du BIOS et/ou remplacement de la carte mère</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#pilote">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Pilote</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDeLAlimentation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Remplacement de l'alimentation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lOrdinateurEstLent">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#disqueDur"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#mMoireVive"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#remplacementDuDisqueDurParUnDisqueSsd"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#ajoutDeMMoireVive"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#optimisationDuSystMeDExploitationEtOuRemplacementDuDisqueDur"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#performance"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDePerformances"/>
+    <rdfs:label>L'ordinateur est lent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#optimisationDuSystMeDExploitationEtOuRemplacementDuDisqueDur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Optimisation du système d'exploitation et/ou remplacement du disque dur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#disqueDur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Disque dur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lCranClignote">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Panne"/>
+    <ns1:aPourComposant rdf:resource="http://example.com/ontologie/pannes#carteGraphique"/>
+    <ns1:aPourSolution rdf:resource="http://example.com/ontologie/pannes#miseJourDuPiloteDeLaCarteGraphique"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#problMeDAffichage"/>
+    <rdfs:label>L'écran clignote</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#asus">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#MarqueDOrdinateur"/>
+    <rdfs:label>Asus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#lenovo">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#MarqueDOrdinateur"/>
+    <rdfs:label>Lenovo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#rInstallationLogicielle">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDeSolution"/>
+    <rdfs:label>Réinstallation logicielle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeMMoire">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de mémoire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#carteRSeau">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Composant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Carte réseau</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#testDuDisqueDurEtOuRemplacementDuDisqueDur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#dell"/>
+    <rdfs:label>Test du disque dur et/ou remplacement du disque dur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeRedMarrage">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de redémarrage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#nettoyageDuVentilateurEtOuMiseJourDuPiloteDuProcesseur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#entretienMiseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#lenovo"/>
+    <rdfs:label>Nettoyage du ventilateur et/ou mise à jour du pilote du processeur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDesPilotesDeLaCarteRSeauEtOuRemplacementDeLaCarteRSeau">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#miseJourLogicielleRemplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Vérification des pilotes de la carte réseau et/ou remplacement de la carte réseau</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#remplacementDuClavier">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#remplacementDeComposant"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Remplacement du clavier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#nettoyageDuVentilateur">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#entretien"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#asus"/>
+    <rdfs:label>Nettoyage du ventilateur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeRSeau">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de réseau</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeAudio">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème audio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#hp">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#MarqueDOrdinateur"/>
+    <rdfs:label>HP</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#vRificationDeLTatDuDisqueDurEtOuRInstallationDuSystMeDExploitation">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#Solution"/>
+    <ns1:aPourType rdf:resource="http://example.com/ontologie/pannes#entretienMiseJourLogicielle"/>
+    <ns1:estAssocieALaMarque rdf:resource="http://example.com/ontologie/pannes#hp"/>
+    <rdfs:label>Vérification de l'état du disque dur et/ou réinstallation du système d'exploitation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeStockage">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de stockage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ontologie/pannes#problMeDeStabilit">
+    <rdf:type rdf:resource="http://example.com/ontologie/pannes#TypeDePanne"/>
+    <rdfs:label>Problème de stabilité</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
